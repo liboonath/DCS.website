@@ -1,0 +1,136 @@
+function showMessage() {
+  alert("Thank you for your interest! Admissions team will contact you soon.");
+}
+document.getElementById("admissionForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("✅ Application submitted successfully! Our admissions team will contact you soon.");
+  this.reset();
+});
+
+
+
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    const popup = document.createElement("div");
+    popup.style.position = "fixed";
+    popup.style.top = 0;
+    popup.style.left = 0;
+    popup.style.width = "100%";
+    popup.style.height = "100%";
+    popup.style.background = "rgba(0,0,0,0.8)";
+    popup.style.display = "flex";
+    popup.style.alignItems = "center";
+    popup.style.justifyContent = "center";
+
+    const fullImg = document.createElement("img");
+    fullImg.src = img.src;
+    fullImg.style.maxWidth = "90%";
+    fullImg.style.maxHeight = "90%";
+
+    popup.appendChild(fullImg);
+    document.body.appendChild(popup);
+
+    popup.addEventListener("click", () => popup.remove());
+  });
+});
+
+
+*add only opional principal images*
+
+school-website/
+│── images/
+│    └── principal.jpg
+
+
+let index = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+
+setInterval(() => {
+  testimonials.forEach(t => t.style.display = "none");
+  testimonials[index].style.display = "block";
+  index = (index + 1) % testimonials.length;
+}, 3000);
+👉 This will show one testimonial at a time, auto-changing every 3 seconds.
+
+
+
+school-website/
+│── images/
+│    ├── student1.jpg
+│    ├── student2.jpg
+│    └── student3.jpg
+👉 Use square or portrait photos for best results.
+
+
+
+Let’s do it 🚀
+Here are 2 EASY & FREE ways to publish your school website online. No payment, no credit card.
+
+🌟 OPTION 1: GitHub Pages (Best for beginners)
+✅ Step 1: Create GitHub Account
+
+Go to GitHub
+
+Sign up (free)
+
+✅ Step 2: Upload Your Website
+
+Click New Repository
+
+Repository name:
+👉 school-website
+
+Make it Public
+
+Click Create Repository
+
+Now upload:
+
+index.html
+
+style.css
+
+script.js
+
+images/ folder
+
+videos/ folder (optional – videos can be large)
+
+👉 You can drag & drop files directly on GitHub.
+
+✅ Step 3: Enable GitHub Pages
+
+Go to Settings
+
+Click Pages
+
+Source → select main branch
+
+Click Save
+
+🎉 After 1–2 minutes, your site is LIVE at:
+
+https://yourusername.github.io/school-website/
+
+⚡ OPTION 2: Netlify (FAST & Professional)
+✅ Step 1: Go to Netlify
+
+Sign up using Google or GitHub
+
+✅ Step 2: Deploy
+
+Click Add new site
+
+Choose Deploy manually
+
+Drag & drop your entire project folder
+
+🎉 DONE! Your site is instantly live.
+
+Netlify gives you:
+✔ Free hosting
+✔ Free HTTPS
+✔ Fast loading
+✔ Easy updates
+
+You can even rename the site URL
